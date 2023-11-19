@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+int segtree[2*n]={};
+auto sum = [&](int a,int b){
+    a+=n; b+=n;
+    int s=0;
+    while (a <= b){
+        if(a%2 == 1) s+= segtree[a++];
+        if(b%2 == 0) s+= segtree[b--];
+        a/=2;
+        b/=2;
+    }
+    return s;
+};
+auto add = [&](int k,int x){
+    k+=n;
+    segtree[k]+=x;
+    for(k/=2;k>=1;k/=2){
+        segtree[k] = segtree[2*k] + segtree[2*k+1];
+    }
+};
+for(int i=0;i<n;i++){
+    add(i,a[i]);
+}   
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>segment_tree_basic</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
