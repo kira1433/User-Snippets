@@ -1,0 +1,32 @@
+\subsubsection{Number of Divisors,Sum of Divisors}\\
+
+$n = p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$\\
+$d(n) = (e_1 + 1) \cdot (e_2 + 1) \cdots (e_k + 1)$\\
+
+$\sigma(n) = \frac{p_1^{e_1 + 1} - 1}{p_1 - 1} \cdot \frac{p_2^{e_2 + 1} - 1}{p_2 - 1} \cdots \frac{p_k^{e_k + 1} - 1}{p_k - 1}$\\
+
+\subsubsection{Euler Totient Function}\\
+
+$a^n \equiv a^{n \bmod \phi(m)} \pmod m$\\
+$x^{n}\equiv x^{\phi(m)+[n \bmod \phi(m)]} \mod m$\\
+
+
+\subsubsection{Mobius Function}\\
+
+$\sum_{d n} \mu(d)=e(n)=[n=1]$\\
+
+Example:\\
+
+$f(n)=\sum_{i=1}^n \sum_{j=1}^n[\operatorname{gcd}(i, j)=1]$\\
+$f(n)=\sum_{i=1}^n \sum_{j=1}^n \sum_{d(\sec (h, j)} \mu(d)$\\
+$f(n)=\sum_{i=1}^n \sum_{j=1}^n \sum_{d=1}^n[d \mid \operatorname{gcd}(i, j)] \mu(d)$\\
+$f(n)=\sum_{i=1}^n \mu(d)\left(\sum_{i=1}^n[d \mid i]\right)\left(\sum_{j=1}^n[d \mid i]\right)$\\
+$f(n)=\sum_{d=1}^n \mu(d)\left\lfloor\frac{n}{d}\right\rfloor^2$\\
+
+\subsubsection{Pólya enumeration theorem}\\
+
+$|\text{Classes}| = \frac{1}{|G|} \sum_{\pi \in G} k^{C(\pi)}$
+
+$C(\pi)$ is number of cycles in the permutation \pi, $k$ is the number of values that each representation element can take.
+
+
